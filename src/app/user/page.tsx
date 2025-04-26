@@ -4,7 +4,7 @@ import { log } from "console";
 export default async function user(){
   
 
-        const response = await axios.get("https://corporatebs-generator.sameerkumar.website/");
+        const response = await axios.get("http://localhost:3000/serverside");
 
         const data = response.data;
         console.log(data)
@@ -13,8 +13,10 @@ export default async function user(){
         <>
 
           <div className="text-emerald-100">
-          {data.phrase}
           
+            {data.user}
+            <br />
+            {data.email}
 
           </div>
 
